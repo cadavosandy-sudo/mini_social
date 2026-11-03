@@ -1,0 +1,447 @@
+/* ==================== GLOBAL STYLES ==================== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+    background-color: #0b0e0c;
+    color: #f1f5f9;
+    min-height: 100vh;
+}
+
+/* ==================== TOPBAR HEADER (TEXT LOGO) ==================== */
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #141a17;
+    border-bottom: 1px solid #1f2923;
+    padding: 15px 30px;
+    width: 100%;
+}
+
+.brand {
+    font-size: 22px;
+    font-weight: 700;
+    color: #22c55e;
+    text-decoration: none;
+}
+
+.brand:hover {
+    color: #16a34a;
+}
+
+.topbar-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.nav-link-profile {
+    color: #22c55e;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.nav-link-profile:hover {
+    text-decoration: underline;
+}
+
+.welcome {
+    color: #cbd5e1;
+    font-size: 14px;
+}
+
+.logout {
+    color: #ef4444;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.logout:hover {
+    text-decoration: underline;
+}
+
+/* ==================== AUTH / LOGIN & REGISTER CONTAINER ==================== */
+.auth-container {
+    min-height: 100vh;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.auth-card {
+    width: 100% !important;
+    max-width: 420px !important;
+    background: #141a17 !important;
+    border: 1px solid #1f2923 !important;
+    padding: 35px !important;
+    border-radius: 16px !important;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+    box-sizing: border-box !important;
+}
+
+.auth-card .logo {
+    text-align: center;
+    color: #22c55e;
+    margin-bottom: 6px;
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.auth-card .subtitle {
+    text-align: center;
+    color: #94a3b8;
+    margin-bottom: 24px;
+    font-size: 14px;
+}
+
+.auth-footer {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 13px;
+    color: #94a3b8;
+}
+
+.auth-footer a {
+    color: #22c55e;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.auth-footer a:hover {
+    text-decoration: underline;
+}
+
+/* ==================== FULL-WIDTH LAYOUT ==================== */
+.social-layout {
+    display: block !important;
+    max-width: 800px !important;
+    margin: 30px auto !important;
+    padding: 0 20px !important;
+    box-sizing: border-box !important;
+}
+
+.feed-content {
+    width: 100% !important;
+    display: block !important;
+}
+
+/* ==================== UNIVERSAL FORM CONTROLS ==================== */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+}
+
+label {
+    display: block;
+    margin: 10px 0 4px 0;
+    font-size: 13px;
+    font-weight: bold;
+    color: #cbd5e1;
+    text-align: left;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="file"],
+textarea {
+    display: block;
+    width: 100% !important;
+    background: #0b0e0c !important;
+    border: 1px solid #222e26 !important;
+    border-radius: 8px !important;
+    padding: 12px !important;
+    font-size: 14px !important;
+    color: #f1f5f9 !important;
+    box-sizing: border-box !important;
+    outline: none !important;
+}
+
+input:focus, textarea:focus {
+    border-color: #22c55e !important;
+}
+
+button {
+    display: block;
+    width: 100% !important;
+    padding: 12px !important;
+    margin-top: 15px !important;
+    background: #22c55e !important;
+    color: #052e16 !important;
+    border: none !important;
+    border-radius: 8px !important;
+    font-size: 15px !important;
+    font-weight: bold !important;
+    cursor: pointer !important;
+    transition: background 0.2s;
+}
+
+button:hover {
+    background: #16a34a !important;
+}
+
+/* ==================== POST CARD STYLES ==================== */
+.post-card {
+    background: #141a17 !important;
+    border: 1px solid #1f2923 !important;
+    border-radius: 12px !important;
+    padding: 24px !important;
+    margin-bottom: 20px !important;
+    color: #f1f5f9 !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+}
+
+.post-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+.avatar {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background-color: #22c55e;
+    color: #052e16;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 16px;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.profile-pic {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.post-author {
+    display: flex;
+    flex-direction: column;
+    font-size: 13px;
+}
+
+.post-author strong {
+    color: #f8fafc;
+}
+
+.post-author span {
+    color: #94a3b8;
+}
+
+.post-author small {
+    color: #64748b;
+    font-size: 11px;
+}
+
+.post-text {
+    font-size: 14px;
+    color: #e2e8f0;
+    margin-bottom: 12px;
+    line-height: 1.5;
+    word-break: break-word;
+}
+
+.post-attachment {
+    max-width: 100%;
+    border-radius: 8px;
+    margin-top: 8px;
+    max-height: 400px;
+    object-fit: cover;
+}
+
+/* ==================== LIKES & COMMENTS STYLES ==================== */
+.post-actions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-top: 15px;
+    padding-top: 12px;
+    border-top: 1px solid #1f2923;
+}
+
+.like-btn {
+    background: transparent !important;
+    border: none !important;
+    color: #f1f5f9 !important;
+    font-size: 14px !important;
+    cursor: pointer;
+    padding: 4px 8px !important;
+    width: auto !important;
+    margin: 0 !important;
+    display: inline-flex !important;
+    align-items: center;
+    gap: 6px;
+    border-radius: 6px;
+    transition: background 0.2s;
+}
+
+.like-btn:hover {
+    background: rgba(255, 255, 255, 0.05) !important;
+}
+
+.like-btn.liked {
+    color: #ef4444 !important;
+}
+
+.comment-count {
+    color: #94a3b8;
+    font-size: 13px;
+}
+
+.comments-section {
+    margin-top: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.comments-list {
+    background-color: #0b0e0c;
+    border-radius: 8px;
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    max-height: 180px;
+    overflow-y: auto;
+    border: 1px solid #1f2923;
+}
+
+.comment-item {
+    font-size: 13px;
+    color: #cbd5e1;
+    word-break: break-word;
+}
+
+.comment-item strong {
+    color: #22c55e;
+    margin-right: 6px;
+}
+
+.comment-form {
+    display: flex !important;
+    flex-direction: row !important;
+    gap: 8px !important;
+    margin-top: 5px !important;
+}
+
+.comment-form input[type="text"] {
+    flex: 1;
+    margin: 0 !important;
+    padding: 8px 12px !important;
+    font-size: 13px !important;
+}
+
+.comment-form button {
+    width: auto !important;
+    margin: 0 !important;
+    padding: 8px 14px !important;
+    font-size: 13px !important;
+    font-weight: 600 !important;
+}
+
+/* ==================== PROFILE PAGE FIXES ==================== */
+.profile-page {
+    max-width: 680px !important;
+    margin: 30px auto !important;
+    padding: 0 20px !important;
+    box-sizing: border-box !important;
+}
+
+.profile-card,
+.profile-posts {
+    background-color: #141a17 !important;
+    border: 1px solid #1f2923 !important;
+    border-radius: 12px !important;
+    padding: 30px !important;
+    color: #f1f5f9 !important;
+    box-sizing: border-box !important;
+    margin-bottom: 24px !important;
+}
+
+.profile-card {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* FIX FOR GIANT AVATAR */
+.profile-large-pic {
+    width: 120px !important;
+    height: 120px !important;
+    border-radius: 50% !important;
+    object-fit: cover !important;
+    margin: 0 auto 15px auto !important;
+    display: block !important;
+    border: 3px solid #22c55e !important;
+}
+
+.profile-card h1 {
+    font-size: 24px;
+    color: #f8fafc;
+    margin-bottom: 4px;
+}
+
+.profile-card p {
+    color: #94a3b8;
+    font-size: 14px;
+    margin-bottom: 6px;
+}
+
+.bio-text {
+    color: #cbd5e1 !important;
+    margin-top: 8px !important;
+    font-style: italic;
+}
+
+.profile-card hr {
+    width: 100%;
+    border: none;
+    border-top: 1px solid #1f2923;
+    margin: 25px 0;
+}
+
+.profile-card h2 {
+    font-size: 16px;
+    color: #cbd5e1;
+    margin-bottom: 12px;
+    align-self: flex-start;
+}
+
+.error {
+    padding: 10px;
+    border-radius: 7px;
+    background: rgba(239, 68, 68, 0.1);
+    border: 1px solid rgba(239, 68, 68, 0.2);
+    color: #ef4444;
+    font-size: 14px;
+    margin-top: 15px;
+}
+
+.success {
+    padding: 10px;
+    border-radius: 7px;
+    background: rgba(34, 197, 94, 0.1);
+    border: 1px solid rgba(34, 197, 94, 0.2);
+    color: #22c55e;
+    font-size: 14px;
+    margin-top: 15px;
+}
